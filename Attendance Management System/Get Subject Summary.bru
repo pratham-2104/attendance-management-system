@@ -1,0 +1,22 @@
+meta {
+  name: Get Subject Summary
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://127.0.0.1:5000/subject_summary
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "test@example.com"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

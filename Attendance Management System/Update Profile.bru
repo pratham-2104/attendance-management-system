@@ -1,0 +1,28 @@
+meta {
+  name: Update Profile
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://127.0.0.1:5000/update_profile
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "test@example.com",
+    "student_name": "John Doe",
+    "enrollment_no": "2021001",
+    "phone_no": "9876543210",
+    "branch": "Computer Engineering",
+    "semester": "5",
+    "class": "A"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

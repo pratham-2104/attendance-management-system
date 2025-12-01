@@ -1,0 +1,23 @@
+meta {
+  name: Get Attendance Summary
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://127.0.0.1:5000/attendance_summary
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "test@example.com",
+    "date": "2025-12-01"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

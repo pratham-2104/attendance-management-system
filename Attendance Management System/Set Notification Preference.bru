@@ -1,0 +1,23 @@
+meta {
+  name: Set Notification Preference
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://127.0.0.1:5000/set_notifications
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "test@example.com",
+    "allowed": true
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

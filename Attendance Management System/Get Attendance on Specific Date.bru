@@ -1,0 +1,23 @@
+meta {
+  name: Get Attendance on Specific Date
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://127.0.0.1:5000/attendance_on_date
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "test@example.com",
+    "date": "2025-12-01"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

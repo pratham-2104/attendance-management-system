@@ -1,0 +1,23 @@
+meta {
+  name: Verify OTP
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://127.0.0.1:5000/verify_otp
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "test@example.com",
+    "otp": "5349"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
